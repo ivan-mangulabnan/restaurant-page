@@ -1,0 +1,9 @@
+body {
+    background-image: url("./images/steven-ungermann-fZ1vlupgdSY-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button {
+    cursor: pointer;
+}
