@@ -22,4 +22,8 @@ module.exports = {
             },
         ],
     },
+    devtool: "eval-source-map",
+    devServer: {
+        watchFiles: ["./src/index.html"],
+    },
 }
