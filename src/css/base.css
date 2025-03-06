@@ -15,7 +15,7 @@ body {
     background-repeat: no-repeat;
 
     display: grid;
-    grid-template-rows: 8rem 1fr;
+    grid-template-rows: 8rem 1fr 2rem;
 }
 
 button {
@@ -54,6 +54,12 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: end;
+}
+
+footer {
+    background-color: var(--color-charcoal-with-opacity);
+    color: var(--color-white);
+    font-size: .8rem;
 }
 
 /* .home {
