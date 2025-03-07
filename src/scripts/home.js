@@ -37,17 +37,34 @@ function addContentsToRestoNameDiv() {
 function addContentsToImageDiv() {
     const image1 = document.createElement(`div`);
     const image2 = document.createElement(`div`);
-    const image3 = document.createElement(`div`);
 
     image1.classList.add(`imageOne`);
     image2.classList.add(`imageTwo`);
-    image3.classList.add(`imageThree`);
 
     image1.classList.add(`images`);
     image2.classList.add(`images`);
-    image3.classList.add(`images`);
 
-    imageDiv.append(image1, image2, image3);
+    imageDiv.append(image1, image2);
+}
+
+function addContentsToParagraphDiv() {
+    const wrapper = document.createElement(`div`);
+    const p = document.createElement(`p`);
+    const nameSpan = document.createElement(`span`);
+    const restoSpan = document.createElement(`span`);
+    const pSpan = document.createElement(`span`);
+    const button = document.createElement(`button`);
+
+    nameSpan.textContent = `IVAN `;
+    restoSpan.textContent = `RESTO`;
+    p.textContent = "At ";
+    pSpan.textContent = ", we perfect the art of pasta and Caesar salad. Our handcrafted pasta, made with time-honored techniques, pairs beautifully with bold, authentic flavors. Experience Italian simplicity at its finest.";
+    button.textContent = "ORDER NOW";
+
+    nameSpan.appendChild(restoSpan);
+    p.append(nameSpan, pSpan);
+    wrapper.append(p, button);
+    paragraphDiv.appendChild(wrapper);
 }
 
 export function showHome() {
@@ -56,4 +73,5 @@ export function showHome() {
     appendChildrenToMainContainer();
     addContentsToRestoNameDiv();
     addContentsToImageDiv();
+    addContentsToParagraphDiv();
 }
