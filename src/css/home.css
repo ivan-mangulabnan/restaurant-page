@@ -1,6 +1,6 @@
 .turn-to-grid {
     display: grid;
-    grid-template-columns: minmax(1fr, 50%) 50%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     gap: 10px;
 }
@@ -8,6 +8,33 @@
 .name {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+}
+
+.name-wrapper {
+    height: min-content;
+    width: min-content;
+
+    padding-top: 5rem;
+    margin: auto;
+    font-family: "Poppins";
+    text-shadow: 10px 5px 10px var(--color-charcoal-with-opacity);
+}
+
+.name-style {
+    font-size: 11rem;
+    line-height: 11rem;
+    letter-spacing: -1.1rem;
+    color: var(--color-green);
+}
+
+.resto-style {
+    font-family: "Poppins";
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 0;
+    letter-spacing: 1rem;
+    padding-left: 10.5rem;
+    color: var(--color-wood);
 }
 
 .image {
@@ -38,7 +65,7 @@
 }
 
 .imageTwo {
-    background-image: url("./images/top-view-fresh-green-salad-dark-bowl.jpg");
+    background-image: url("./images/juicy-steak-medium-rare-beef-with-spices-grilled-vegetables.jpg");
 
     grid-row: 3 / 7;
     grid-column: 3 / 6;
@@ -46,7 +73,7 @@
 }
 
 .imageThree {
-    background-image: url("./images/juicy-steak-medium-rare-beef-with-spices-grilled-vegetables.jpg");
+    background-image: url("./images/top-view-fresh-green-salad-dark-bowl.jpg");
 
     grid-row: 2 / 6;
     grid-column: 2 / 5;
