@@ -19,16 +19,19 @@ function appendChildrenToMainContainer() {
 }
 
 function addContentsToRestoNameDiv() {
-    const p = document.createElement(`p`);
-    const span = document.createElement(`span`);
+    const divWrapper = document.createElement(`div`);
+    divWrapper.classList.add(`name-wrapper`);
 
-    p.classList.add(`i`);
-    span.classList.add(`van`);
-    
-    span.textContent = `VAN'S RESTO`;
-    p.textContent = `I`;
-    p.appendChild(span);
-    restoNameDiv.appendChild(p);
+    const name = document.createElement(`h1`);
+    name.classList.add(`name-style`);
+    name.textContent = `IVAN`;
+
+    const resto = document.createElement(`p`);
+    resto.classList.add(`resto-style`);
+    resto.textContent = `RESTO`;
+
+    divWrapper.append(name, resto);
+    restoNameDiv.appendChild(divWrapper);
 }
 
 function addContentsToImageDiv() {
