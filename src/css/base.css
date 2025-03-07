@@ -62,7 +62,15 @@ nav {
 footer {
     background-color: var(--color-charcoal-with-opacity);
     color: var(--color-white);
-    font-size: .8rem;
+    font-size: .9rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    color: var(--color-white);
 }
 
 #content {
