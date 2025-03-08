@@ -1,24 +1,20 @@
-const mainContainer = document.querySelector(`#content`);
-
-const restoNameDiv = document.createElement(`div`);
-const imageDiv = document.createElement(`div`);
-const paragraphDiv = document.createElement(`div`);
+export const mainContainer = document.querySelector(`#content`);
 
 function applyGridToMainContainer() {
     mainContainer.classList.add(`turn-to-grid`);
 }
 
-function addClassToDivs() {
-    restoNameDiv.classList.add(`name`);
-    imageDiv.classList.add(`image`);
-    paragraphDiv.classList.add(`para`);
+function addClassToDivs(logoDiv, imDiv, paraDiv) {
+    logoDiv.classList.add(`name`);
+    imDiv.classList.add(`image`);
+    paraDiv.classList.add(`para`);
 }
 
-function appendChildrenToMainContainer() {
-    mainContainer.append(restoNameDiv, imageDiv, paragraphDiv);
+function appendChildrenToMainContainer(logoDiv, imDiv, paraDiv) {
+    mainContainer.append(logoDiv, imDiv, paraDiv);
 }
 
-function addContentsToRestoNameDiv() {
+function addContentsToRestoNameDiv(logoDiv) {
     const divWrapper = document.createElement(`div`);
     divWrapper.classList.add(`name-wrapper`);
 
@@ -31,10 +27,10 @@ function addContentsToRestoNameDiv() {
     resto.textContent = `RESTO`;
 
     divWrapper.append(name, resto);
-    restoNameDiv.appendChild(divWrapper);
+    logoDiv.appendChild(divWrapper);
 }
 
-function addContentsToImageDiv() {
+function addContentsToImageDiv(imDiv) {
     const image1 = document.createElement(`div`);
     const image2 = document.createElement(`div`);
 
@@ -44,10 +40,10 @@ function addContentsToImageDiv() {
     image1.classList.add(`images`);
     image2.classList.add(`images`);
 
-    imageDiv.append(image1, image2);
+    imDiv.append(image1, image2);
 }
 
-function addContentsToParagraphDiv() {
+function addContentsToParagraphDiv(paraDiv) {
     const wrapper = document.createElement(`div`);
     const p = document.createElement(`p`);
     const nameSpan = document.createElement(`span`);
@@ -64,14 +60,21 @@ function addContentsToParagraphDiv() {
     nameSpan.appendChild(restoSpan);
     p.append(nameSpan, pSpan);
     wrapper.append(p, button);
-    paragraphDiv.appendChild(wrapper);
+    paraDiv.appendChild(wrapper);
 }
 
 export function showHome() {
+    mainContainer.innerHTML = "";
+
     applyGridToMainContainer();
-    addClassToDivs();
-    appendChildrenToMainContainer();
-    addContentsToRestoNameDiv();
-    addContentsToImageDiv();
-    addContentsToParagraphDiv();
+
+    const restoNameDiv = document.createElement(`div`);
+    const imageDiv = document.createElement(`div`);
+    const paragraphDiv = document.createElement(`div`);
+
+    appendChildrenToMainContainer(restoNameDiv, imageDiv, paragraphDiv);
+    addClassToDivs(restoNameDiv, imageDiv, paragraphDiv);
+    addContentsToRestoNameDiv(restoNameDiv);
+    addContentsToImageDiv(imageDiv);
+    addContentsToParagraphDiv(paragraphDiv);
 }
