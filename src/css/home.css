@@ -113,4 +113,10 @@
 
 .para button {
     cursor: pointer;
+    height: 4rem;
+    background-color: var(--color-wood);
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+    font-family: "Poppins";
+    font-size: 1.2rem;
 }
