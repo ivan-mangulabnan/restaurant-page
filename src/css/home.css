@@ -91,7 +91,7 @@
 }
 
 .para span:first-of-type {
-    letter-spacing: -1.25px;
+    letter-spacing: -3px;
     font-size: 1.6rem;
     color: var(--color-green);
 }
@@ -100,6 +100,7 @@
     color: var(--color-wood);
     font-size: 1.2rem;
     letter-spacing: 2px;
+    padding-left: 3px;
 }
 
 .para button {
