@@ -25,6 +25,8 @@ class Menu {
 
         Menu.#menuDivContent(theMenuDiv);
         Menu.#firstSetDivContent(firstSetDiv);
+        Menu.#secondSetDivContent(secondSetDiv);
+        Menu.#dndDivContent(dnd);
         menuContainer.append(theMenuDiv, firstSetDiv, secondSetDiv, dnd);
     }
 
@@ -153,6 +155,193 @@ class Menu {
         appetizer.append(topDiv, botDiv);
         firstWrapper.append(appetizer, firstCourse);
         firstSetDiv.appendChild(firstWrapper);
+    }
+
+    static #secondSetDivContent(secondSetDiv) {
+        const secondWrapper = document.createElement(`div`);
+
+        const appetizer = document.createElement(`div`);
+        appetizer.classList.add(`appetizer-div`);
+
+        const topDiv = document.createElement(`div`);
+        topDiv.classList.add(`appetizer-top`);
+        const appetizerText = document.createElement(`h3`);
+        appetizerText.textContent = "SECONDI PIATTI";
+
+        const botDiv = document.createElement(`div`);
+        botDiv.classList.add(`appetizer-bot`);
+        const ul = document.createElement(`ul`);
+        const li1 = document.createElement(`li`);
+        const span1Title = document.createElement(`span`);
+        span1Title.textContent = "Ossobuco";
+        const span1Price = document.createElement(`span`);
+        span1Price.textContent = "$32";
+
+        const li2 = document.createElement(`li`);
+        const span2Title = document.createElement(`span`);
+        span2Title.textContent = "Bistecca alla Fiorentina";
+        const span2Price = document.createElement(`span`);
+        span2Price.textContent = "$50";
+
+        const li3 = document.createElement(`li`);
+        const span3Title = document.createElement(`span`);
+        span3Title.textContent = "Pollo alla Cacciatora";
+        const span3Price = document.createElement(`span`);
+        span3Price.textContent = "$48";
+
+        const li4 = document.createElement(`li`);
+        const span4Title = document.createElement(`span`);
+        span4Title.textContent = "Branzino al Forno";
+        const span4Price = document.createElement(`span`);
+        span4Price.textContent = "$37";
+
+        const li5 = document.createElement(`li`);
+        const span5Title = document.createElement(`span`);
+        span5Title.textContent = "Frittura di Calamari";
+        const span5Price = document.createElement(`span`);
+        span5Price.textContent = "$49";
+
+        const firstCourse = document.createElement(`div`);
+        firstCourse.classList.add(`first-course-div`);
+
+        const firstCourseTop = document.createElement(`div`);
+        firstCourseTop.classList.add(`first-course-top`);
+        const firstCourseText = document.createElement(`h3`);
+        firstCourseText.textContent = "CONTORNI";
+
+        const firstCourseBot = document.createElement(`div`);
+        firstCourseBot.classList.add(`first-course-bot`);
+        const firstUl = document.createElement(`ul`);
+        const fli1 = document.createElement(`li`);
+        const fspan1Title = document.createElement(`span`);
+        fspan1Title.textContent = "Patate al Forno";
+        const fspan1Price = document.createElement(`span`);
+        fspan1Price.textContent = "$22";
+
+        const fli2 = document.createElement(`li`);
+        const fspan2Title = document.createElement(`span`);
+        fspan2Title.textContent = "Verdure Grigliate";
+        const fspan2Price = document.createElement(`span`);
+        fspan2Price.textContent = "$23";
+
+        const fli3 = document.createElement(`li`);
+        const fspan3Title = document.createElement(`span`);
+        fspan3Title.textContent = "Insalata Mista";
+        const fspan3Price = document.createElement(`span`);
+        fspan3Price.textContent = "$24";
+
+        fli1.append(fspan1Title, fspan1Price);
+        fli2.append(fspan2Title, fspan2Price);
+        fli3.append(fspan3Title, fspan3Price);
+        firstUl.append(fli1, fli2, fli3);
+        firstCourseBot.appendChild(firstUl);
+        firstCourseTop.appendChild(firstCourseText);
+        firstCourse.append(firstCourseTop, firstCourseBot);
+        li1.append(span1Title, span1Price);
+        li2.append(span2Title, span2Price);
+        li3.append(span3Title, span3Price);
+        li4.append(span4Title, span4Price);
+        li5.append(span5Title, span5Price);
+        ul.append(li1, li2, li3, li4, li5);
+        botDiv.appendChild(ul);
+        topDiv.appendChild(appetizerText);
+        appetizer.append(topDiv, botDiv);
+        secondWrapper.append(appetizer, firstCourse);
+        secondSetDiv.appendChild(secondWrapper);
+    }
+
+    static #dndDivContent(dnd) {
+        const dndWrapper = document.createElement(`div`);
+        dndWrapper.classList.add(`dnd-wrapper`);
+
+        const appetizer = document.createElement(`div`);
+        appetizer.classList.add(`appetizer-div`);
+
+        const topDiv = document.createElement(`div`);
+        topDiv.classList.add(`appetizer-top`);
+        const appetizerText = document.createElement(`h3`);
+        appetizerText.textContent = "DOLCI";
+
+        const botDiv = document.createElement(`div`);
+        botDiv.classList.add(`appetizer-bot`);
+        const ul = document.createElement(`ul`);
+        const li1 = document.createElement(`li`);
+        const span1Title = document.createElement(`span`);
+        span1Title.textContent = "Tiramisu";
+        const span1Price = document.createElement(`span`);
+        span1Price.textContent = "$21";
+
+        const li2 = document.createElement(`li`);
+        const span2Title = document.createElement(`span`);
+        span2Title.textContent = "Panna Cotta";
+        const span2Price = document.createElement(`span`);
+        span2Price.textContent = "$25";
+
+        const li3 = document.createElement(`li`);
+        const span3Title = document.createElement(`span`);
+        span3Title.textContent = "Cannoli Siciliani";
+        const span3Price = document.createElement(`span`);
+        span3Price.textContent = "$26";
+
+        const li4 = document.createElement(`li`);
+        const span4Title = document.createElement(`span`);
+        span4Title.textContent = "Gelato";
+        const span4Price = document.createElement(`span`);
+        span4Price.textContent = "$21";
+
+        const firstCourse = document.createElement(`div`);
+        firstCourse.classList.add(`first-course-div`);
+
+        const firstCourseTop = document.createElement(`div`);
+        firstCourseTop.classList.add(`first-course-top`);
+        const firstCourseText = document.createElement(`h3`);
+        firstCourseText.textContent = "BEVANDE";
+
+        const firstCourseBot = document.createElement(`div`);
+        firstCourseBot.classList.add(`first-course-bot`);
+        const firstUl = document.createElement(`ul`);
+        const fli1 = document.createElement(`li`);
+        const fspan1Title = document.createElement(`span`);
+        fspan1Title.textContent = "Espresso / Cappuccino";
+        const fspan1Price = document.createElement(`span`);
+        fspan1Price.textContent = "$7";
+
+        const fli2 = document.createElement(`li`);
+        const fspan2Title = document.createElement(`span`);
+        fspan2Title.textContent = "Italian Wines";
+        const fspan2Price = document.createElement(`span`);
+        fspan2Price.textContent = "$100";
+
+        const fli3 = document.createElement(`li`);
+        const fspan3Title = document.createElement(`span`);
+        fspan3Title.textContent = "Limoncello";
+        const fspan3Price = document.createElement(`span`);
+        fspan3Price.textContent = "$5";
+
+        const fli4 = document.createElement(`li`);
+        const fspan4Title = document.createElement(`span`);
+        fspan4Title.textContent = "Aperol Spritz";
+        const fspan4Price = document.createElement(`span`);
+        fspan4Price.textContent = "$60";
+
+        fli1.append(fspan1Title, fspan1Price);
+        fli2.append(fspan2Title, fspan2Price);
+        fli3.append(fspan3Title, fspan3Price);
+        fli4.append(fspan4Title, fspan4Price);
+        firstUl.append(fli1, fli2, fli3, fli4);
+        firstCourseBot.appendChild(firstUl);
+        firstCourseTop.appendChild(firstCourseText);
+        firstCourse.append(firstCourseTop, firstCourseBot);
+        li1.append(span1Title, span1Price);
+        li2.append(span2Title, span2Price);
+        li3.append(span3Title, span3Price);
+        li4.append(span4Title, span4Price);
+        ul.append(li1, li2, li3, li4);
+        botDiv.appendChild(ul);
+        topDiv.appendChild(appetizerText);
+        appetizer.append(topDiv, botDiv);
+        dndWrapper.append(appetizer, firstCourse);
+        dnd.appendChild(dndWrapper);
     }
 
     static showMenu() {
