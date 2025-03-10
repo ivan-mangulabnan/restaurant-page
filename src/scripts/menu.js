@@ -33,8 +33,16 @@ class Menu {
 
         const theMenu = document.createElement(`h2`);
         theMenu.classList.add(`the-menu`);
+        theMenu.textContent = "THE"
 
-        wrapper.appendChild(theMenu);
+        const menu = document.createElement(`span`);
+        menu.classList.add(`span-menu`);
+        menu.textContent = "MENU";
+
+        const line = document.createElement(`hr`);
+
+        theMenu.appendChild(menu);
+        wrapper.append(theMenu, line);
         theMenuDiv.appendChild(wrapper);
     }
 
