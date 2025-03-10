@@ -2,7 +2,8 @@
 
 .menu-container {
     height: 100%;
-    background-color: var(--color-charcoal);
+    background-color: var(--color-charcoal-with-opacity);
+    color: var(--color-white);
 
     display: grid;
     grid-template-columns: repeat(3, calc(100% / 3));
@@ -12,6 +13,36 @@
 .menu-main-div {
     grid-row: 1 / 2;
     grid-column: 1 / 4;
+    font-family: "EB Garamond";
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.the-menu-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.the-menu {
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.span-menu {
+    font-size: 5rem;
+}
+
+.the-menu-wrapper hr {
+    width: 40rem;
+    height: 3px;
+    background-color: var(--color-white);
 }
 
 .first-set-div {
