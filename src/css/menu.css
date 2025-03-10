@@ -65,8 +65,8 @@
 }
 
 .the-menu-wrapper hr {
-    width: 40rem;
-    height: 3px;
+    width: 27rem;
+    height: 5px;
     background-color: var(--color-green);
     border: none;
 }
