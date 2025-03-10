@@ -12,6 +12,7 @@
     --color-green-with-opacity: #63634A80;
     --color-gray-with-opacity: #D9D6CF80;
     --color-lesser-gold: #D8BF94;
+    --color-deep-charcoal: #232323DD;
 }
 
 body {
@@ -63,7 +64,7 @@ nav {
 }
 
 footer {
-    background-color: var(--color-charcoal-with-opacity);
+    background-color: var(--color-deep-charcoal);
     color: var(--color-white);
     font-size: .9rem;
 
