@@ -26,6 +26,7 @@ class About {
         About.#div2(div2);
         About.#div3a(div3a);
         About.#div4(div4);
+        About.#div5b(div5b);
     }
 
     static #div2(div2) {
@@ -126,6 +127,22 @@ class About {
         innerDivTop.append(innerDivTop1, innerDivTop2, innerDivTop3, innerDivTop4, innerDivTop5);
         div.append(innerDivTop, innerDivMid, innerDivBot);
         div4.appendChild(div);
+    }
+
+    static #div5b(div5b) {
+        const div = document.createElement("div");
+        div5b.appendChild(div);
+
+        const p = document.createElement(`p`);
+        div.appendChild(p);
+
+        const span1 = document.createElement(`span`);
+        span1.textContent = "Our";
+        const span2 = document.createElement(`span`);
+        span2.textContent = " VISION ";
+        const span3 = document.createElement(`span`);
+        span3.textContent = "is to bring the heart of Italy to your table—authentic flavors, warm hospitality, and unforgettable moments.";
+        p.append(span1, span2, span3);
     }
 
     static showAbout() {
