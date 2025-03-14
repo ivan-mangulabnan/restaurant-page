@@ -81,18 +81,43 @@ class About {
 
         const innerDivTop3 = document.createElement(`div`);
         const p3 = document.createElement(`p`);
-        p3.textContent = "OUR";
+        p3.textContent = "THE";
 
         const innerDivTop4 = document.createElement(`div`);
         const p4 = document.createElement(`p`);
-        p4.textContent = "OWNER";
+        p4.textContent = "FOUNDER";
 
         const innerDivTop5 = document.createElement(`div`);
 
 
         const innerDivMid = document.createElement(`div`);
-        const innerDivBot = document.createElement(`div`);
+        const innerDivMid1 = document.createElement(`div`);
 
+        const innerDivBot = document.createElement(`div`);
+        const innerDivBot1 = document.createElement(`div`);
+        const pBot1 = document.createElement(`p`);
+        pBot1.textContent = ",,";
+        const blockQuote = document.createElement(`blockquote`);
+        const spanBot1 = document.createElement(`span`);
+        spanBot1.textContent = "In every dish, there's a story. In every meal, there's passion. Welcome to ";
+        const spanBot2 = document.createElement(`span`);
+        const spanBot2a = document.createElement(`span`);
+        spanBot2a.textContent = " IVAN ";
+        const spanBot2b = document.createElement(`span`);
+        spanBot2b.textContent = "RESTO";
+        const spanBot3 = document.createElement(`span`);
+        spanBot3.textContent = ", where tradition meets taste. Buon appetito!";
+        const pBot2 = document.createElement(`p`);
+        pBot2.textContent = "- Ivan Mangulabnan,";
+        const spanBot4 = document.createElement(`span`);
+        spanBot4.textContent = " FOUNDER";
+
+        innerDivBot1.append(pBot1, blockQuote);
+        blockQuote.append(spanBot1, spanBot2, spanBot3, pBot2);
+        spanBot2.append(spanBot2a, spanBot2b);
+        pBot2.appendChild(spanBot4);
+        innerDivBot.appendChild(innerDivBot1);
+        innerDivMid.appendChild(innerDivMid1);
         innerDivTop4.appendChild(p4);
         innerDivTop3.appendChild(p3);
         innerDivTop2.appendChild(p2);
