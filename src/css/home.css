@@ -57,7 +57,8 @@
 }
 
 .imageOne {
-    background-image: url("./images/gianluca-gerardi-FCqxyKU-lr4-unsplash.jpg");
+    background-image: url("./images/eadwyne-6MZKhxxkfng-unsplash.jpg");
+    background-position: center;
 
     grid-row: 1 / 5;
     grid-column: 1 / 4;
