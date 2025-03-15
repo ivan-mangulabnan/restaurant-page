@@ -21,8 +21,8 @@ function addClassPressed(event) {
 nav.addEventListener(`click`, addClassPressed);
 
 document.addEventListener(`DOMContentLoaded`, () => {
-    aboutButton.classList.add(`pressed`);
-    showAbout();
+    homeButton.classList.add(`pressed`);
+    showHome();
 });
 
 homeButton.addEventListener(`click`, () => {
