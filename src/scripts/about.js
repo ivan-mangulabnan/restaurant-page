@@ -27,6 +27,7 @@ class About {
         About.#div3a(div3a);
         About.#div4(div4);
         About.#div5b(div5b);
+        About.#div6(div6);
     }
 
     static #div2(div2) {
@@ -145,7 +146,89 @@ class About {
         p.append(span1, span2, span3);
     }
 
+    static #div6(div6) {
+        const topDiv = document.createElement(`div`);
+        const botDiv = document.createElement(`div`);
+        div6.append(topDiv, botDiv);
+
+        const p = document.createElement(`p`);
+        p.textContent = "FEEDBACKS";
+        topDiv.appendChild(p);
+
+        const botDiv1 = document.createElement(`div`);
+        botDiv.appendChild(botDiv1);
+
+        const name = document.createElement(`p`);
+        name.classList.add(`commenters-name`);
+        name.textContent = "Sophia L.";
+
+        const div1 = document.createElement(`div`);
+        div1.classList.add("gray-div");
+
+        const div2 = document.createElement(`div`);
+        div2.classList.add("white-border");
+
+        const comment = document.createElement(`p`);
+        comment.classList.add(`comment`);
+        comment.textContent = "Absolutely delicious! Authentic Italian flavors, warm atmosphere, and top-notch service!";
+        div2.appendChild(comment);
+
+        const comma = document.createElement(`p`);
+        comma.textContent = ",,";
+        comma.classList.add("top-comma");
+
+        const comma2 = document.createElement(`p`);
+        comma2.textContent = ",,";
+        comma2.classList.add("bot-comma");
+
+        const picDiv = document.createElement(`div`);
+        picDiv.classList.add(`pic-div`);
+
+        const picInnerDiv = document.createElement(`div`);
+        picInnerDiv.classList.add(`pic-inner-div`);
+
+        picDiv.appendChild(picInnerDiv);
+        botDiv1.append(div1, div2, comma, comma2, picDiv, name);
+
+        const botDiv2 = document.createElement(`div`);
+        botDiv.appendChild(botDiv2);
+
+        const name1 = document.createElement(`p`);
+        name1.classList.add(`commenters-name`);
+        name1.textContent = "Mark T.";
+
+        const div1a = document.createElement(`div`);
+        div1a.classList.add("gray-div");
+
+        const div2a = document.createElement(`div`);
+        div2a.classList.add("white-border");
+
+        const comment1 = document.createElement(`p`);
+        comment1.classList.add(`comment`);
+        comment1.textContent = "Stumbled in by chance—left completely amazed! Fantastic food and great service. Bravo!";
+        div2a.appendChild(comment1);
+
+        const comma1 = document.createElement(`p`);
+        comma1.textContent = ",,";
+        comma1.classList.add("top-comma");
+
+        const comma2a = document.createElement(`p`);
+        comma2a.textContent = ",,";
+        comma2a.classList.add("bot-comma");
+
+        const picDiv1 = document.createElement(`div`);
+        picDiv1.classList.add(`pic-div`);
+
+        const picInnerDiv1 = document.createElement(`div`);
+        picInnerDiv1.classList.add(`pic-inner-div1`);
+
+        picDiv1.appendChild(picInnerDiv1);
+        botDiv2.append(div1a, div2a, comma1, comma2a, picDiv1, name1);
+    }
+
     static showAbout() {
+        About.#mainContainer.innerHTML = "";
+
         const mainDiv = document.createElement(`div`);
         About.#mainDiv(mainDiv);
     }
